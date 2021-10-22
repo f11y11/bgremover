@@ -12,6 +12,7 @@ for f in files:
     data = []
     image = Image.open(realpath(join(PATH, f))).convert('RGBA')
     for pixel in image.getdata():
+        #         R         G         B
         if (pixel[0], pixel[1], pixel[2]) == (255, 255, 255):
             data.append((255, 255, 255, 0))
         else:
